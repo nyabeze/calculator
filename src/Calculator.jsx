@@ -7,6 +7,9 @@ const Calculator = () => {
     const [secondNum,setSecondNum] = useState("");
     const [firstOp,setFirstOp] = useState("");
     const [secondOp,setSecondOp] = useState("");
+    const [screenExpression,setScreenExpression] = useState("");
+    const [history,setHistory] = useState("")
+
 
 
     const handleClick = (num) => {
@@ -83,38 +86,54 @@ const Calculator = () => {
         }
     }
 
+
+
     
     return (
-        <>
-        <div className="screen">
-            <p>{numString}</p>
+        <div className="calculator">
+            <div className="screen">
+                <p className="live-expression">{screenExpression}</p>
+                <p className="prev-expression">{history}</p>
+
+                <p className='evaluation'>{numString}</p>
+            </div>
+            <div className="buttons">
+                <button className="btn" onClick={()=>{backSpace() }}>()</button>
+                <button className="btn" onClick={() => {handleClick('C'),setScreenExpression(""),setHistory("")}}>C</button>
+                <button className="btn" onClick={() => {backSpace,setScreenExpression(prev => prev.slice(0, -1))}}>x</button>
+                <button className="btn" onClick={() => {handleOperator('*'),setScreenExpression(prev => prev + '*')}}>*</button>
+                
+                <button className="btn" onClick={() => {handleClick('1'),setScreenExpression(prev => prev + '1')}}>1</button>
+                <button className="btn" onClick={() => {handleClick('2'),setScreenExpression(prev => prev + '2')}}>2</button>
+                <button className="btn" onClick={() => {handleClick('3'),setScreenExpression(prev => prev + '3')}}>3</button>
+                <button className="btn" onClick={() => {handleOperator('/'),setScreenExpression(prev => prev + '/')}}>÷</button>
+                <button className="btn" onClick={() => {handleClick('4'),setScreenExpression(prev => prev + '4')}}>4</button>
+                <button className="btn" onClick={() => {handleClick('5'),setScreenExpression(prev => prev + '5')}}>5</button>
+                <button className="btn" onClick={() => {handleClick('6'),setScreenExpression(prev => prev + '6')}}>6</button>
+                <button className="btn" onClick={() => {handleOperator('+'),setScreenExpression(prev => prev + '+')}}>+</button>
+                <button className="btn" onClick={() => {handleClick('7'),setScreenExpression(prev => prev + '7')}}>7</button>
+                <button className="btn" onClick={() => {handleClick('8'),setScreenExpression(prev => prev + '8')}}>8</button>
+                <button className="btn" onClick={() => {handleClick('9'),setScreenExpression(prev => prev + '9')}}>9</button>
+                <button className="btn" onClick={() => {handleOperator('-'),setScreenExpression(prev => prev + '-')}}>-</button>
+                <button className="btn zero" onClick={() => {handleClick('0'),setScreenExpression(prev => prev + '0')}}>0</button>
+                
+                
+                
+                
+                <button
+                        className="btn full_width"
+                        onClick={() => {
+                            const expression = screenExpression
+                            handleEquals()
+                            setHistory(expression)
+                            setScreenExpression("")
+                        }}
+                        >
+                        =
+                </button>
+
+            </div>
         </div>
-        <div className="buttons">
-            <button className="btn" onClick={backSpace}>()</button>
-            <button className="btn" onClick={() => handleClick('C')}>C</button>
-            <button className="btn" onClick={backSpace}>x</button>
-            <button className="btn" onClick={() => handleOperator('*')}>*</button>
-            
-            <button className="btn" onClick={() => handleClick('1')}>1</button>
-            <button className="btn" onClick={() => handleClick('2')}>2</button>
-            <button className="btn" onClick={() => handleClick('3')}>3</button>
-            <button className="btn" onClick={() => handleOperator('/')}>/</button>
-            <button className="btn" onClick={() => handleClick('4')}>4</button>
-            <button className="btn" onClick={() => handleClick('5')}>5</button>
-            <button className="btn" onClick={() => handleClick('6')}>6</button>
-            <button className="btn" onClick={() => handleOperator('+')}>+</button>
-            <button className="btn" onClick={() => handleClick('7')}>7</button>
-            <button className="btn" onClick={() => handleClick('8')}>8</button>
-            <button className="btn" onClick={() => handleClick('9')}>9</button>
-            <button className="btn" onClick={() => handleOperator('-')}>-</button>
-            <button className="btn zero" onClick={() => handleClick('0')}>0</button>
-            
-            
-            
-            
-            <button className="btn full_width" onClick={handleEquals}>=</button>
-        </div>
-        </>
     )
 
 }

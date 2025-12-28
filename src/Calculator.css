@@ -1,12 +1,36 @@
 .screen{
     width: 400px;
     height: 100px;
+    padding: 10px;
     border: 2px #97A87A solid;
     background-color: #002455;
+    display: inline-block;
 }
+
+.evaluation{
+    margin-left: 310px;
+    margin-top: 14px;
+}
+
+.live-expression{
+    padding: 5px;
+    display: inline;
+}
+
+.prev-expression{
+    max-width:40px ;
+    color: gray;
+    font-size: 14px;
+    margin-left: 270px;
+    margin-top: 4px;
+    display: inline;
+
+}
+
 
 .buttons{
     width: 400px;
+
 }
 
 .btn{
@@ -14,6 +38,7 @@
     margin: 2.5%;
     height: 60px;
     font-size: 24px;
+    
 }
 
 .full_width{
@@ -23,3 +48,11 @@
 .zero{
     margin-left: 160px;
 }
+
+.calculator{
+    display: grid;
+  place-items: center;
+  height: 100vh;}
+
+
+    
