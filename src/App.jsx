@@ -1,12 +1,32 @@
 import Card from "./card.jsx";
 import Calculator from "./Calculator.jsx" ;
+import StudentCard  from "./StudentCard.jsx"; 
 
 function App() {
+  const students =[
+    {image: "https://picsum.photos/id/237/200/200", name:"Alice", age:20, grade:"A"},
+    {image: "https://picsum.photos/id/1/200/200", name:"Bob", age:22, grade:"B"},
+    {image: "https://picsum.photos/id/27/200/200", name:"Charlie", age:21, grade:"A+"}
+
+  ]
 
   return (
    <div>
     
-    <Calculator/>
+    {/* <Calculator/> */}
+    {students.map((student,index) => (
+      <StudentCard
+      key={index}
+      image={student.image}
+      name={student.name}
+      age={student.age}
+      grade={student.grade}
+     
+      />
+    ))}
+
+
+
   
    </div>
   )

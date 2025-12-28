@@ -1,0 +1,9 @@
+.student-box{
+    display: inline-block;
+    border: 2px solid #F6F3C2;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    margin-left:100px ;
+    width: 250px;
+    text-align: center;
+}
