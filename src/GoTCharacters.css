@@ -1,0 +1,41 @@
+.character-container{
+    padding: 5%;
+}
+
+.horizontal-list {
+  list-style: none;   /* Remove bullets */
+  padding: 0;         /* Remove default padding */
+  margin: 0;          /* Remove default margin */
+  display: flex;      /* Make items horizontal */
+  gap: 20px;          /* Optional spacing between items */
+  margin: auto;
+  justify-content: center; /* Center the list items */
+
+  /* border: 2px solid #00ffff; Border color and thickness */
+  border-radius: 10px;       /* Rounded corners */
+  width: fit-content;      /* Width based on content */
+}
+
+.horizontal-list li {
+  /* Optional styling for list items */
+  padding: 5px 10px;  /* Separator between items */
+  cursor: pointer;
+}
+
+.horizontal-list li:hover {
+ background-color: #0ff;          /* Cyan highlight */
+  color: #000;                     /* Dark text for contrast */
+  box-shadow: 0 0 15px #0ff;      /* Glow around item */
+  border-radius: 5px;
+}
+
+/* ⭐ ACTIVE ITEM */
+.horizontal-list li.active {
+  color: #fff;
+  background-color: rgba(77, 166, 255, 0.15);
+  box-shadow: 0 0 12px #4da6ff;
+}
+
+.character-container{
+    width: 100%;
+}

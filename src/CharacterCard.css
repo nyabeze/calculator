@@ -1,0 +1,19 @@
+.character-card {
+  width: 250px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 2%;
+}
+
+.character-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
