@@ -2,6 +2,7 @@ import Card from "./card.jsx";
 import Calculator from "./Calculator.jsx" ;
 import StudentCard  from "./StudentCard.jsx"; 
 import GoTCharacters from "./GoTCharacters.jsx";
+import DigitalClock from "./DigitalClock.jsx";
 
 function App() {
   // const students =[
@@ -13,7 +14,7 @@ function App() {
 
   return (
    <div>
-    <GoTCharacters/>
+    {/* <GoTCharacters/> */}
     
     {/* <Calculator/>
     {students.map((student,index) => (
@@ -26,6 +27,8 @@ function App() {
      
       />
     ))} */}
+
+    <DigitalClock/>
 
 
 
