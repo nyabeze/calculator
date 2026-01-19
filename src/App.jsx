@@ -3,6 +3,8 @@ import Calculator from "./Calculator.jsx" ;
 import StudentCard  from "./StudentCard.jsx"; 
 import GoTCharacters from "./GoTCharacters.jsx";
 import DigitalClock from "./DigitalClock.jsx";
+import WeatherApp from "./WeatherApp.jsx";
+
 
 function App() {
   // const students =[
@@ -28,7 +30,11 @@ function App() {
       />
     ))} */}
 
-    <DigitalClock/>
+    {/* <DigitalClock/> */}
+
+    <WeatherApp/>
+
+
 
 
 
