@@ -1,4 +1,4 @@
-body {
+/* body {
   min-height: 100vh;
   background: linear-gradient(to bottom right, #60a5fa, #3b82f6);
   display: flex;
@@ -7,7 +7,7 @@ body {
   padding: 1rem;
   font-family: Arial, sans-serif;
   color:antiquewhite;
-}
+} */
 
 .weather-app {
   background: rgba(255, 255, 255, 0.1);

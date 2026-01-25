@@ -37,6 +37,10 @@ const WeatherApp = () => {
                             <option value="Masvingo">Masvingo</option>
                             <option value="Kwekwe">Kwekwe</option>
                             <option value="Bulawayo">Bulawayo</option>
+                            <option value="Chitungwiza">Chitungwiza</option>    
+                            <option value="Chegutu">Chegutu</option>
+                            <option value="Gutu">Gutu</option>
+                            <option value="Chivhu">Chivhu</option>
                         </select>
                     </div>
                     <div>

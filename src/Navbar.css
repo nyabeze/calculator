@@ -1,0 +1,184 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem 3rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Brand */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.logo-icon {
+  background: black;
+  color: white;
+  padding: 0.4rem;
+  border-radius: 8px;
+}
+
+/* Center nav */
+.nav-center {
+  display: flex;
+  gap: 2rem;
+}
+
+/* CENTER PILL */
+.pill-container {
+  position: relative;
+  display: flex;
+  background: #f1f5f9;
+  border-radius: 999px;
+  padding: 0.25rem;
+  width: 200px;
+}
+
+/* SLIDING PILL */
+.pill {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 8px);
+  height: calc(100% - 8px);
+  background: black;
+  border-radius: 999px;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Move right */
+.pill.right {
+  transform: translateX(100%);
+}
+
+/* BUTTONS */
+.pill-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  color: #0f172a;
+  transition: color 0.3s ease;
+}
+
+.pill-btn svg {
+  stroke-width: 2;
+}
+
+.pill-btn.active {
+  color: white;
+  font-weight: 600;
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Right side */
+.nav-right {
+  display: flex;
+  gap: 1rem;
+}
+
+.login {
+  background: none;
+  border: 1px solid #cbd5f5;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.signup {
+  background-color:black;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.signup:hover {
+  background-color: #1e40af;
+}
+
+.login:hover {
+  background-color: #1e40af;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .pill-container {
+    width: 180px;
+  }
+
+  .pill-btn {
+    font-size: 0.95rem;
+  }
+
+  .nav-right {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .nav-center {
+    justify-content: center;
+  }
+
+  .pill-container {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .nav-right {
+    justify-content: center;
+  }
+
+  .login,
+  .signup {
+    width: 100%;
+    max-width: 160px;
+  }
+}

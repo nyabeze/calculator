@@ -4,6 +4,8 @@ import StudentCard  from "./StudentCard.jsx";
 import GoTCharacters from "./GoTCharacters.jsx";
 import DigitalClock from "./DigitalClock.jsx";
 import WeatherApp from "./WeatherApp.jsx";
+import Grid from "./Grid.jsx";
+import Home from "./home.jsx";
 
 
 function App() {
@@ -32,7 +34,11 @@ function App() {
 
     {/* <DigitalClock/> */}
 
-    <WeatherApp/>
+    {/* <WeatherApp/> */}
+
+    {/* <Grid/> */}
+    <Home/>
+
 
 
 

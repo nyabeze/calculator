@@ -1,50 +1,49 @@
 import { useState } from "react";
-import { FaSearch } from "react-icons/fa";
+import "./Navbar.css";
+import { Home, Key, Building2 } from "lucide-react";
 
-export default function SearchBar({ onSearch }) {
-  const [location, setLocation] = useState("");
-  const [rooms, setRooms] = useState("");
-
-  const handleSearch = () => {
-    onSearch({ location, rooms });
-  };
+const Navbar = () => {
+  const [active, setActive] = useState("rent");
 
   return (
-    <div className="max-w-4xl mx-auto mt-8 p-4 bg-[#FAFAFA] rounded-full shadow-md flex flex-col sm:flex-row items-center gap-2 border border-[#E5E5E5]">
-      
-      {/* Location Input */}
-      <div className="flex-1 px-4 py-2">
-        <input
-          type="text"
-          placeholder="Where are you going?"
-          value={location}
-          onChange={(e) => setLocation(e.target.value)}
-          className="w-full bg-transparent outline-none text-[#121212] placeholder-[#999999]"
-        />
+    <nav className="navbar">
+      <div className="logo">
+        <div className="logo-icon">
+          <Home size={20} />
+        </div>
+        <span>Dzimba</span>
+      </div>
+      <div className="nav-center">
+        <div className="pill-container">
+          <span
+            className={`pill ${active === "buy" ? "right" : ""}`}
+          />
+
+          <button
+            className={`pill-btn ${active === "rent" ? "active" : ""}`}
+            onClick={() => setActive("rent")}
+          >
+            <Key size={16} />
+            <span>Rent</span>
+          </button>
+
+          <button
+            className={`pill-btn ${active === "buy" ? "active" : ""}`}
+            onClick={() => setActive("buy")}
+          >
+            <Building2 size={16} />
+            <span>Buy</span>
+          </button>
+
+        </div>
       </div>
 
-      {/* Rooms Input */}
-      <div className="flex-1 px-4 py-2 border-l border-[#E5E5E5] sm:border-l sm:border-r border-[#E5E5E5]">
-        <select
-          value={rooms}
-          onChange={(e) => setRooms(e.target.value)}
-          className="w-full bg-transparent outline-none text-[#121212] placeholder-[#999999]"
-        >
-          <option value="">Any Rooms</option>
-          <option value="1">1 Room</option>
-          <option value="2">2 Rooms</option>
-          <option value="3">3 Rooms</option>
-          <option value="4">4+ Rooms</option>
-        </select>
+      <div className="nav-right">
+        <button className="login">Login</button>
+        <button className="signup">Sign up</button>
       </div>
-
-      {/* Search Button */}
-      <button
-        onClick={handleSearch}
-        className="bg-[#121212] text-[#FAFAFA] p-3 rounded-full hover:opacity-90 transition flex items-center justify-center"
-      >
-        <FaSearch />
-      </button>
-    </div>
+    </nav>
   );
-}
+};
+
+export default Navbar;
