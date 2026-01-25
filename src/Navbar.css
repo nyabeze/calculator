@@ -1,14 +1,16 @@
+/* ---------------- NAVBAR ---------------- */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 1rem 3rem;
   background-color: #ffffff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 10;
 }
 
-/* Brand */
+/* ---------------- LOGO ---------------- */
 .logo {
   display: flex;
   align-items: center;
@@ -18,20 +20,13 @@
   color: #0f172a;
 }
 
-.logo-icon {
-  background: black;
-  color: white;
-  padding: 0.4rem;
-  border-radius: 8px;
-}
-
-/* Center nav */
+/* ---------------- CENTER PILL ---------------- */
 .nav-center {
   display: flex;
   gap: 2rem;
 }
 
-/* CENTER PILL */
+/* PILL CONTAINER */
 .pill-container {
   position: relative;
   display: flex;
@@ -53,23 +48,20 @@
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Move right */
 .pill.right {
   transform: translateX(100%);
 }
 
-/* BUTTONS */
+/* PILL BUTTONS */
 .pill-btn {
   flex: 1;
   background: transparent;
   border: none;
   z-index: 1;
-
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-
   font-size: 0.95rem;
   padding: 0.5rem 0;
   cursor: pointer;
@@ -85,24 +77,8 @@
   color: white;
   font-weight: 600;
 }
-.dropdown {
-  position: relative;
-}
 
-.dropdown-menu {
-  position: absolute;
-  top: 120%;
-  background: white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  display: none;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* Right side */
+/* ---------------- RIGHT DESKTOP ---------------- */
 .nav-right {
   display: flex;
   gap: 1rem;
@@ -117,7 +93,7 @@
 }
 
 .signup {
-  background-color:black;
+  background-color: black;
   color: white;
   border: none;
   padding: 0.5rem 1.25rem;
@@ -133,52 +109,140 @@
   background-color: #1e40af;
 }
 
-@media (max-width: 900px) {
-  .navbar {
-    padding: 1rem 1.5rem;
-  }
-
-  .pill-container {
-    width: 180px;
-  }
-
-  .pill-btn {
-    font-size: 0.95rem;
-  }
-
-  .nav-right {
-    gap: 0.5rem;
-  }
+.lister-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-@media (max-width: 640px) {
+.lister-btn:hover {
+  background-color: #1e40af;
+}
+
+/* ---------------- MOBILE ---------------- */
+/* Make mobile 'Become a Property Lister' match desktop */
+.lister-mobile {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #2563eb;
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.lister-mobile:hover {
+  background-color: #1e40af;
+}
+
+/* Adjust spacing for mobile menu links */
+.mobile-menu .mobile-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 72px;
+  right: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  width: 220px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  padding: 0.5rem 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-link {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.mobile-link:hover {
+  background: #f1f5f9;
+}
+
+.mobile-link.bold {
+  font-weight: 600;
+}
+
+.mobile-menu hr {
+  margin: 0.5rem 0;
+  border: none;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* ---------------- DISPLAY HELPERS ---------------- */
+.desktop-only {
+  display: flex;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* ---------------- MEDIA QUERIES ---------------- */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
   .navbar {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 0.5rem;
+    align-items: center;
   }
 
+  /* Logo top-left */
   .logo {
-    justify-content: center;
+    grid-column: 1 / 2;
+    grid-row: 1;
   }
 
+  /* Hamburger top-right */
+  .menu-btn {
+    grid-column: 3 / 4;
+    grid-row: 1;
+    justify-self: end;
+    display: block;
+  }
+
+  /* Pill centered on second row */
   .nav-center {
+    grid-column: 1 / -1;
+    grid-row: 2;
     justify-content: center;
-  }
-
-  .pill-container {
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-  }
-
-  .nav-right {
-    justify-content: center;
-  }
-
-  .login,
-  .signup {
-    width: 100%;
-    max-width: 160px;
+    display: flex;
   }
 }

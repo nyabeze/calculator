@@ -1,0 +1,85 @@
+.searchbar-container {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* LOCATION FIELD */
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.search-field input,
+.search-field select {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.95rem;
+}
+
+.location-field input {
+  cursor: pointer;
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+}
+
+.chevron.rotated {
+  transform: rotate(180deg);
+}
+
+/* EXPANDED FIELDS */
+.expanded-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.expanded-fields .search-field {
+  flex: 1 1 45%;
+}
+
+/* SEARCH BUTTON */
+.search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #1e40af;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  .expanded-fields .search-field {
+    flex: 1 1 100%;
+  }
+
+  .search-btn {
+    width: 100%;
+  }
+}

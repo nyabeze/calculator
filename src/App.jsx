@@ -6,6 +6,7 @@ import DigitalClock from "./DigitalClock.jsx";
 import WeatherApp from "./WeatherApp.jsx";
 import Grid from "./Grid.jsx";
 import Home from "./home.jsx";
+import SearchBar from "./SearchBar.jsx";
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
 
     {/* <Grid/> */}
     <Home/>
+    <SearchBar/>
 
 
 
