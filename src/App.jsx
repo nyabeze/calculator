@@ -39,7 +39,7 @@ function App() {
 
     {/* <Grid/> */}
     <Home/>
-    <SearchBar/>
+    
 
 
 

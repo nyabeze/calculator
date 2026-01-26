@@ -1,0 +1,124 @@
+.mobile-searchbar-container {
+  width: 100%;
+  max-width: 480px;
+  margin: auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Base search field */
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.75rem;
+  background: #f1f5f9;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  width: 95%;
+}
+
+/* Collapsed location row */
+.location-input {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  width: 95%;               /* stretch full width */
+  background: #f1f5f9;        /* darker than white */
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+
+  border: 1px solid #e5e7eb;
+  cursor: text;
+}
+
+/* icon color */
+.input-icon {
+  color: black; /* muted dark gray */
+}
+
+/* input styling */
+.location-input input {
+  flex: 1;                    /* make input stretch */
+  border: none;
+  outline: none;
+  background: transparent;    /* so container color shows */
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+/* placeholder color */
+.location-input input::placeholder {
+  color: #94a3b8;
+}
+
+.placeholder {
+  flex: 1;
+  font-weight: 500;
+  color: #0f172a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+}
+
+.chevron.rotated {
+  transform: rotate(180deg);
+}
+
+/* Inputs and selects */
+.search-field input,
+.search-field select {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.95rem;
+}
+
+/* Expanded fields container */
+.expanded-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+/* Search button */
+.search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background: #1e40af;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .expanded-fields .search-field {
+    flex: 1 1 100%;
+  }
+
+  .search-btn {
+    width: 100%;
+  }
+}
