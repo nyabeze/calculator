@@ -1,0 +1,17 @@
+.light {
+    --light_color: #ffffff;
+    --dark_color: #000000;
+}
+
+.dark {
+    --light_color: #000000;
+    --dark_color: #ffffff;
+}
+
+.content {
+    background-color: var(--light_color);
+}
+
+h1 {
+    color: var(--dark_color);
+}

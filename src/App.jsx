@@ -7,6 +7,7 @@ import WeatherApp from "./WeatherApp.jsx";
 import Grid from "./Grid.jsx";
 import Home from "./home.jsx";
 import SearchBar from "./SearchBar.jsx";
+import ContextApp from "./ContextApp.jsx";
 
 
 function App() {
@@ -40,8 +41,8 @@ function App() {
     {/* <WeatherApp/> */}
 
     {/* <Grid/> */}
-    <Home/>
-    
+   {/* <Home/> */} 
+    <ContextApp />
 
 
 

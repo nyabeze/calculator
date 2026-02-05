@@ -46,3 +46,9 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
   */
+
+
+  :root {
+    --light_color: #ffffff !important;
+    --dark_color: #000000 !important;
+  }
