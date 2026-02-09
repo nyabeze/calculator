@@ -48,7 +48,39 @@ button:focus-visible {
   */
 
 
-  :root {
-    --light_color: #ffffff !important;
-    --dark_color: #000000 !important;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+:root {
+  --light_color: #ffffff !important;
+  --dark_color: #000000 !important;
+}
+
+body {
+  min-height: 100vh;
+  /* background: var(--dark_color); */
+  /* border: 2px solid red; */
+  margin: 0;
+  padding: 0;
+}
+
+
+h1,
+h2,
+h3 {
+  color: var(--dark_color);
+}
+
+.content_light * {
+    background: var(--light_color);
+    color: var(--dark_color);
+}
+
+.content_dark * {
+    background: var(--dark_color);
+    color: var(--light_color);
+}

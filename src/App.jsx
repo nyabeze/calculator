@@ -8,6 +8,9 @@ import Grid from "./Grid.jsx";
 import Home from "./home.jsx";
 import SearchBar from "./SearchBar.jsx";
 import ContextApp from "./ContextApp.jsx";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Products from "./Products.jsx";
+import Cart from "./Cart.jsx";
 
 
 function App() {
@@ -19,6 +22,8 @@ function App() {
   // ]
 
   // HELLO WORLD. THIS IS GIT
+
+  const BASE_ROUTE = "calculator"
 
   return (
    <div>
@@ -42,8 +47,15 @@ function App() {
 
     {/* <Grid/> */}
    {/* <Home/> */} 
-    <ContextApp />
+    
 
+    <BrowserRouter>
+      <Routes>
+        <Route path={`/${BASE_ROUTE}`} element={<ContextApp />} />
+        <Route path={`/${BASE_ROUTE}/products`} element={<Products />} />
+        <Route path={`/${BASE_ROUTE}/cart`} element={<Cart />} />
+      </Routes>
+    </BrowserRouter>
 
 
 
