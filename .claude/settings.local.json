@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\HomePC\\.claude\\projects\\c--Users-HomePC-react-tutorial-1-first-react-app-my-first-app\\memory"
+    ]
+  }
+}

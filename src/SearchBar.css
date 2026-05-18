@@ -8,7 +8,7 @@
 }
 
 /* Mobile breakpoint */
-@media (max-width: 768px) {
+@media (max-width: 855px) {
   .search-desktop {
     display: none;
   }

@@ -2,15 +2,15 @@ import DesktopSearchBar from "./DesktopSearchBar";
 import MobileSearchBar from "./MobileSearchBar";
 import "./SearchBar.css";
 
-const SearchBar = () => {
+const SearchBar = ({ onSearch }) => {
   return (
     <>
       <div className="search-desktop">
-        <DesktopSearchBar />
+        <DesktopSearchBar onSearch={onSearch}/>
       </div>
 
       <div className="search-mobile">
-        <MobileSearchBar />
+        <MobileSearchBar onSearch={onSearch}/>
       </div>
     </>
   );

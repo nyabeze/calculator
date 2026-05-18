@@ -1,54 +1,63 @@
-import Card from "./card.jsx";
-import Calculator from "./Calculator.jsx" ;
-import StudentCard  from "./StudentCard.jsx"; 
-import GoTCharacters from "./GoTCharacters.jsx";
-import DigitalClock from "./DigitalClock.jsx";
-import WeatherApp from "./WeatherApp.jsx";
-import Grid from "./Grid.jsx";
-import Home from "./home.jsx";
-import SearchBar from "./SearchBar.jsx";
-
+import { Routes, Route } from 'react-router-dom';
+import Portfolio from './portfolio/Portfolio';
+import ProjectWrapper from './portfolio/ProjectWrapper';
+import Calculator from './Calculator';
+import DigitalClock from './DigitalClock';
+import WeatherApp from './WeatherApp';
+import GoTCharacters from './GoTCharacters';
+import Home from './home';
 
 function App() {
-  // const students =[
-  //   {image: "https://picsum.photos/id/237/200/200", name:"Alice", age:20, grade:"A"},
-  //   {image: "https://picsum.photos/id/1/200/200", name:"Bob", age:22, grade:"B"},
-  //   {image: "https://picsum.photos/id/27/200/200", name:"Charlie", age:21, grade:"A+"}
-
-  // ]
-
   return (
-   <div>
-    {/* <GoTCharacters/> */}
-    
-    {/* <Calculator/>
-    {students.map((student,index) => (
-      <StudentCard
-      key={index}
-      image={student.image}
-      name={student.name}
-      age={student.age}
-      grade={student.grade}
-     
+    <Routes>
+      <Route path="/" element={<Portfolio />} />
+
+      <Route
+        path="/projects/calculator"
+        element={
+          <ProjectWrapper title="Calculator">
+            <Calculator />
+          </ProjectWrapper>
+        }
       />
-    ))} */}
 
-    {/* <DigitalClock/> */}
+      <Route
+        path="/projects/digital-clock"
+        element={
+          <ProjectWrapper title="Digital Clock">
+            <DigitalClock />
+          </ProjectWrapper>
+        }
+      />
 
-    {/* <WeatherApp/> */}
+      <Route
+        path="/projects/weather-app"
+        element={
+          <ProjectWrapper title="Weather App">
+            <WeatherApp />
+          </ProjectWrapper>
+        }
+      />
 
-    {/* <Grid/> */}
-    <Home/>
-    
+      <Route
+        path="/projects/got-characters"
+        element={
+          <ProjectWrapper title="GoT Characters">
+            <GoTCharacters />
+          </ProjectWrapper>
+        }
+      />
 
-
-
-
-
-
-  
-   </div>
-  )
+      <Route
+        path="/projects/dzimba"
+        element={
+          <ProjectWrapper title="Dzimba">
+            <Home />
+          </ProjectWrapper>
+        }
+      />
+    </Routes>
+  );
 }
 
-export default App
+export default App;

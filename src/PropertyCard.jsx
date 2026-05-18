@@ -11,6 +11,7 @@ import "./PropertyCard.css";
 const PropertyCard = ({ property }) => {
   return (
     <div className="property-card">
+      
       <div className="property-image">
         <img src={property.image} alt={property.title} />
       </div>

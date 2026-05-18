@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { MapPin, Home, Bed, DollarSign, Search, ChevronDown } from "lucide-react";
 import "./MobileSearchBar.css";
 
-const MobileSearchBar = () => {
+const MobileSearchBar = ({ onSearch }) => {
     const [location, setLocation] = useState("");
     const [propertyType, setPropertyType] = useState("");
     const [rooms, setRooms] = useState("");
@@ -10,6 +10,11 @@ const MobileSearchBar = () => {
     const [expanded, setExpanded] = useState(false);
 
     const toggleExpanded = () => setExpanded(!expanded);
+
+    const handleClick = () => {
+    if (onSearch) onSearch(); // trigger search results
+    setExpanded(false); // collapse after search
+  };
 
     return (
         <div className="mobile-searchbar-container">
@@ -36,10 +41,21 @@ const MobileSearchBar = () => {
                             onChange={(e) => setPropertyType(e.target.value)}
                         >
                             <option value="">Property Type</option>
+
+                            {/* Residential */}
                             <option value="house">House</option>
-                            <option value="apartment">Apartment</option>
-                            <option value="studio">Studio</option>
-                            <option value="villa">Villa</option>
+                            <option value="apartment">Apartment / Flat</option>
+                            <option value="cottage">Cottage</option>
+                            <option value="room">Individual Room</option>
+                            <option value="boarding_house">Boarding House</option>
+
+                            {/* Short-term */}
+                            <option value="short_stay">Short-Term Stay</option>
+                            <option value="guesthouse">Guest House</option>
+
+                            {/* Commercial */}
+                            <option value="shop">Shop / Retail Space</option>
+                            <option value="office">Office Space</option>
                         </select>
                     </div>
 
@@ -64,7 +80,7 @@ const MobileSearchBar = () => {
                         />
                     </div>
 
-                    <button className="search-btn">
+                    <button className="search-btn" onClick={handleClick}>
                         <Search size={18} />
                         <span>Search</span>
                     </button>

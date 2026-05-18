@@ -1,14 +1,71 @@
-.property-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem 3rem;
+.property-section {
+  padding: 0.75rem 1rem;
+  margin: 0 2.5%;
 }
 
-/* Mobile padding */
-@media (max-width: 768px) {
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  margin-left:1.25 ;
+}
+
+/* Horizontal scroll container */
+.property-scroll {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 260px; /* fixed */;
+  gap: 0.1rem;
+
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scroll-snap-type: x mandatory;
+}
+
+/* Smooth scrolling */
+.property-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.property-scroll {
+  scrollbar-width: none;
+}
+
+.property-grid-section {
+  padding: 1.5rem 2rem;
+}
+
+.property-grid-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+/* Horizontal scroll layout */
+.property-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 260px; /* fixed card width */
+  gap: 0.1rem; /* reduce spacing */
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+}
+.property-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.property-card {
+  scroll-snap-align: start;
+}
+
+/* Desktop tuning */
+@media (min-width: 1024px) {
   .property-grid {
-    padding: 1.5rem;
-    gap: 1rem;
+    grid-auto-columns: 260px; /* ✅ perfect Airbnb size */
+    gap: 0.75rem;
   }
 }
+

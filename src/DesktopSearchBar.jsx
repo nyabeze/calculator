@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import { MapPin, Bed, DollarSign, Home, Search } from "lucide-react";
 import './DesktopSearchBar.css';
 
-const SearchBar = () => {
+const SearchBar = ({ onSearch }) => {
   const [location, setLocation] = useState("");
   const [propertyType, setPropertyType] = useState("");
   const [rooms, setRooms] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
+
+  const handleClick = () => {
+    if (onSearch) onSearch(); // trigger search results
+  };
 
   return (
     <div className="searchbar-container">
@@ -26,10 +30,22 @@ const SearchBar = () => {
           value={propertyType}
           onChange={(e) => setPropertyType(e.target.value)}
         >
-          <option value="">Property Type</option>
+          <option value="">Any</option>
+
+          {/* Residential */}
           <option value="house">House</option>
-          <option value="apartment">Apartment</option>
-          <option value="studio">Studio</option>
+          <option value="apartment">Apartment / Flat</option>
+          <option value="cottage">Cottage</option>
+          <option value="room">Individual Room</option>
+          <option value="boarding_house">Boarding House</option>
+
+          {/* Short-term */}
+          <option value="short_stay">Short-Term Stay</option>
+          <option value="guesthouse">Guest House</option>
+
+          {/* Commercial */}
+          <option value="shop">Shop / Retail Space</option>
+          <option value="office">Office Space</option>
         </select>
       </div>
 
@@ -54,7 +70,7 @@ const SearchBar = () => {
         />
       </div>
 
-      <button className="search-btn">
+      <button className="search-btn" onClick={handleClick}>
         <Search size={18} />
       </button>
     </div>

@@ -1,58 +1,146 @@
-.screen{
-    width: 400px;
-    height: 100px;
-    padding: 10px;
-    border: 2px #97A87A solid;
-    background-color: #002455;
-    display: inline-block;
+/* ─── Calculator Layout ─── */
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 54px);
+  background: #0a0a0a;
+  padding: 1rem;
 }
 
-.evaluation{
-    margin-left: 310px;
-    margin-top: 14px;
+/* ─── Screen ─── */
+.screen {
+  width: 340px;
+  background: #0f0f0f;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-bottom: none;
+  border-radius: 14px 14px 0 0;
+  padding: 1.25rem 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+  font-family: 'Space Grotesk', 'Courier New', monospace;
 }
 
-.live-expression{
-    padding: 5px;
-    display: inline;
+.live-expression {
+  font-size: 0.82rem;
+  color: #00d4ff;
+  min-height: 1.1rem;
+  word-break: break-all;
+  letter-spacing: 0.03em;
 }
 
-.prev-expression{
-    max-width:40px ;
-    color: gray;
-    font-size: 14px;
-    margin-left: 270px;
-    margin-top: 4px;
-    display: inline;
-
+.prev-expression {
+  font-size: 0.75rem;
+  color: #444;
+  min-height: 1rem;
+  word-break: break-all;
 }
 
-
-.buttons{
-    width: 400px;
-
+.evaluation {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #f0f0f0;
+  word-break: break-all;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-top: 0.25rem;
+  /* reset old margin hacks */
+  margin-left: 0;
 }
 
-.btn{
-    width: 20%;
-    margin: 2.5%;
-    height: 60px;
-    font-size: 24px;
-    
+/* ─── Buttons Grid ─── */
+.buttons {
+  width: 340px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 0 0 14px 14px;
+  overflow: hidden;
+  /* thin cyan lines as separators */
+  gap: 1px;
+  background: rgba(0, 212, 255, 0.08);
 }
 
-.full_width{
-    width: 90%;
+/* ─── Base Button ─── */
+.btn {
+  height: 68px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  font-family: 'Space Grotesk', sans-serif;
+  background: #111111;
+  color: #e0e0e0;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.08s ease;
+  /* reset all old sizing hacks */
+  width: auto;
+  margin: 0;
 }
 
-.zero{
-    margin-left: 160px;
+.btn:hover {
+  background: #1a1a1a;
+  color: #ffffff;
 }
 
-.calculator{
-    display: grid;
-  place-items: center;
-  height: 100vh;}
+.btn:active {
+  background: rgba(0, 212, 255, 0.14);
+  color: #00d4ff;
+  transform: scale(0.96);
+}
 
+/* ─── Operator buttons (*, ÷, +, -) — always column 4 in the DOM ─── */
+.btn:nth-child(4),
+.btn:nth-child(8),
+.btn:nth-child(12),
+.btn:nth-child(16) {
+  color: #00d4ff;
+  background: rgba(0, 212, 255, 0.06);
+  font-size: 1.15rem;
+}
 
-    
+.btn:nth-child(4):hover,
+.btn:nth-child(8):hover,
+.btn:nth-child(12):hover,
+.btn:nth-child(16):hover {
+  background: rgba(0, 212, 255, 0.14);
+}
+
+/* ─── Clear button (C) ─── */
+.btn:nth-child(2) {
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.06);
+}
+
+.btn:nth-child(2):hover {
+  background: rgba(255, 107, 107, 0.14);
+}
+
+/* ─── Zero — spans 2 columns ─── */
+.zero {
+  grid-column: span 2;
+  margin-left: 0;
+}
+
+/* ─── Equals — spans 2 columns, accent fill ─── */
+.full_width {
+  grid-column: span 2;
+  width: auto;
+  background: #00d4ff;
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.full_width:hover {
+  background: #00bfeb;
+  color: #000000;
+}
+
+.full_width:active {
+  background: #009fcc;
+  color: #000000;
+  transform: scale(0.97);
+}

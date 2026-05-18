@@ -1,41 +1,57 @@
-.character-container{
-    padding: 5%;
+.character-container {
+  min-height: calc(100vh - 54px);
+  background: #0a0a0a;
+  padding: 1.5rem 2rem 3rem;
+  font-family: 'Space Grotesk', sans-serif;
+
+  /* CSS Grid: ul spans all columns, cards auto-fill the rest */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+  gap: 1.25rem;
+  align-content: start;
 }
 
+/* Filter bar — spans full width across all grid columns */
 .horizontal-list {
-  list-style: none;   /* Remove bullets */
-  padding: 0;         /* Remove default padding */
-  margin: 0;          /* Remove default margin */
-  display: flex;      /* Make items horizontal */
-  gap: 20px;          /* Optional spacing between items */
-  margin: auto;
-  justify-content: center; /* Center the list items */
+  grid-column: 1 / -1;
+  list-style: none;
+  padding: 0.6rem 0.75rem;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
 
-  /* border: 2px solid #00ffff; Border color and thickness */
-  border-radius: 10px;       /* Rounded corners */
-  width: fit-content;      /* Width based on content */
+  /* Stick just below the ProjectWrapper back bar */
+  position: sticky;
+  top: 54px;
+  z-index: 10;
 }
 
 .horizontal-list li {
-  /* Optional styling for list items */
-  padding: 5px 10px;  /* Separator between items */
+  padding: 0.35rem 0.9rem;
   cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #666666;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  user-select: none;
 }
 
 .horizontal-list li:hover {
- background-color: #0ff;          /* Cyan highlight */
-  color: #000;                     /* Dark text for contrast */
-  box-shadow: 0 0 15px #0ff;      /* Glow around item */
-  border-radius: 5px;
+  background: rgba(0, 212, 255, 0.08);
+  color: #00d4ff;
+  box-shadow: none;
 }
 
-/* ⭐ ACTIVE ITEM */
 .horizontal-list li.active {
-  color: #fff;
-  background-color: rgba(77, 166, 255, 0.15);
-  box-shadow: 0 0 12px #4da6ff;
-}
-
-.character-container{
-    width: 100%;
+  background: rgba(0, 212, 255, 0.10);
+  color: #00d4ff;
+  border-color: rgba(0, 212, 255, 0.25);
+  box-shadow: none;
 }
