@@ -7,7 +7,7 @@ const SKILL_GROUPS = [
   },
   {
     label: 'Frameworks & Libraries',
-    skills: ['React', 'Flask', 'Django', 'Flutter', 'Tailwind CSS'],
+    skills: ['React', 'Flask', 'Django', 'Flutter', 'Bootstrap'],
   },
   {
     label: 'Tools & Platforms',
