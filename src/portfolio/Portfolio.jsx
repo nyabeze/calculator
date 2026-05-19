@@ -3,10 +3,15 @@ import PortfolioNav from './PortfolioNav';
 import Hero from './Hero';
 import About from './About';
 import ReactProjects from './ReactProjects';
+import PythonProjects from './PythonProjects';
+import GitHubStats from './GitHubStats';
 import Skills from './Skills';
 import Experience from './Experience';
 import Certifications from './Certifications';
 import Speaker from './Speaker';
+import Writing from './Writing';
+import Currently from './Currently';
+import Faith from './Faith';
 import Contact from './Contact';
 
 export default function Portfolio() {
@@ -21,10 +26,15 @@ export default function Portfolio() {
 
         <About />
         <ReactProjects />
+        <PythonProjects />
+        <GitHubStats />
         <Skills />
         <Experience />
         <Certifications />
         <Speaker />
+        <Writing />
+        <Currently />
+        <Faith />
         <Contact />
       </main>
 

@@ -12,6 +12,13 @@ dist
 dist-ssr
 *.local
 
+# Python environments and cache
+PycharmProjects/**/.venv/
+PycharmProjects/**/__pycache__/
+PycharmProjects/**/*.pyc
+PycharmProjects/**/passwords.json
+ryan_CV.pdf
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
