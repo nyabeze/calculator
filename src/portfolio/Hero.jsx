@@ -63,7 +63,7 @@ export default function Hero() {
 
           <p className="p-hero-bio">
             BSc Hons from Midlands State University (2.1). I build clean,
-            functional experiences across web and mobile — with a strong
+            functional experiences across web and mobile   with a strong
             interest in backend development, IoT, and machine learning.
           </p>
 

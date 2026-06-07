@@ -69,7 +69,7 @@ function Demo() {
             <label className="rz-label">Stock Symbol
               <select className="demo-input demo-select" value={symbol} onChange={e => setSymbol(e.target.value)}>
                 {Object.entries(MOCK_STOCKS).map(([sym, s]) => (
-                  <option key={sym} value={sym}>{sym} — {s.name}</option>
+                  <option key={sym} value={sym}>{sym}   {s.name}</option>
                 ))}
               </select>
             </label>
@@ -113,11 +113,11 @@ function Demo() {
           {alert ? (
             <div>
               <p className="sa-alert-title">Alert Triggered!</p>
-              <p className="sa-alert-body">{symbol} moved <strong>{Math.abs(alert.pct).toFixed(2)}%</strong> — from ${alert.prev.toFixed(2)} to ${alert.curr.toFixed(2)}. An SMS would be sent with headlines:</p>
+              <p className="sa-alert-body">{symbol} moved <strong>{Math.abs(alert.pct).toFixed(2)}%</strong>   from ${alert.prev.toFixed(2)} to ${alert.curr.toFixed(2)}. An SMS would be sent with headlines:</p>
               <ul className="sa-headlines">{HEADLINES.map(h => <li key={h}>{h}</li>)}</ul>
             </div>
           ) : (
-            <p className="sa-alert-body">No alert — {symbol} moved only {Math.abs(change)}% today, below your {threshold}% threshold.</p>
+            <p className="sa-alert-body">No alert   {symbol} moved only {Math.abs(change)}% today, below your {threshold}% threshold.</p>
           )}
         </div>
       </div>

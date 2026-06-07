@@ -15,7 +15,7 @@
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.5);
 }
 
-/* Scoped — does NOT affect any other images on the page */
+/* Scoped   does NOT affect any other images on the page */
 .character-card img {
   width: 100%;
   height: 220px;

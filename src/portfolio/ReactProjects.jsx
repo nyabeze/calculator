@@ -26,7 +26,7 @@ const PROJECTS = [
     Icon: Cloud,
     title: 'Weather App',
     description:
-      'Real-time weather for 10 Zimbabwean cities via the OpenWeatherMap API — showing temperature, humidity, and wind.',
+      'Real-time weather for 10 Zimbabwean cities via the OpenWeatherMap API   showing temperature, humidity, and wind.',
     tags: ['React', 'REST API', 'useEffect'],
     route: '/projects/weather-app',
   },
@@ -35,7 +35,7 @@ const PROJECTS = [
     Icon: Shield,
     title: 'GoT Characters',
     description:
-      'Browse and filter 53 Game of Thrones characters by house using a clean derived-state filtering system — no useEffect needed.',
+      'Browse and filter 53 Game of Thrones characters by house using a clean derived-state filtering system   no useEffect needed.',
     tags: ['React', 'Derived State', 'Component Composition'],
     route: '/projects/got-characters',
   },
@@ -44,7 +44,7 @@ const PROJECTS = [
     Icon: Building2,
     title: 'Dzimba',
     description:
-      'Airbnb-style property listing platform for Zimbabwe — responsive navbar, multi-category grids, search, and detailed listings.',
+      'Airbnb-style property listing platform for Zimbabwe   responsive navbar, multi-category grids, search, and detailed listings.',
     tags: ['React', 'React Router', 'Tailwind CSS', 'Lucide'],
     route: '/projects/dzimba',
   },

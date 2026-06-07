@@ -1,0 +1,21 @@
+
+001 The-Open-Trivia-Database
+https://opentdb.com/
+
+004 Documentation-on-HTML-Entities
+https://www.w3schools.com/html/html_entities.asp
+
+004 FreeFormatter-HTML-Unescape-Tool
+https://www.freeformatter.com/html-escape.html
+
+004 StackOverflow-Answer-on-Unescaping-HTML-Entities-in-Python
+https://stackoverflow.com/questions/2087370/decode-html-entities-in-python-string
+
+006 How-to-Get-TKinter-Canvas-Text-to-Wrap
+https://www.google.com/search?q=how+to+get+tkinter+text+in+canvas+to+wrap&oq=how+to+get+tkinter+text+in+canvas+to+wrap&aqs=chrome..69i57j33.7303j0j1&sourceid=chrome&ie=UTF-8
+
+009 How-to-Disable-Tkinter-Buttons
+https://www.google.com/search?q=how+to+disable+tkinter+buttons&oq=how+to+disable+tkinter+buttons&aqs=chrome..69i57j0l2.3868j0j4&sourceid=chrome&ie=UTF-8
+
+009 Course-Fixes-Report-an-Issue
+https://forms.gle/fpNEQooYBX25gcG67

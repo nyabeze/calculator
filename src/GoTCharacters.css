@@ -11,7 +11,7 @@
   align-content: start;
 }
 
-/* Filter bar — spans full width across all grid columns */
+/* Filter bar   spans full width across all grid columns */
 .horizontal-list {
   grid-column: 1 / -1;
   list-style: none;

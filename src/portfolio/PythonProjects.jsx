@@ -18,7 +18,7 @@ const PROJECTS = [
     title: 'Stock Price Alert',
     route: '/projects/stock-alert',
     description:
-      'Monitors Tesla stock via Alpha Vantage — triggers SMS alerts via Twilio with related news headlines when daily price swings exceed 5%.',
+      'Monitors Tesla stock via Alpha Vantage   triggers SMS alerts via Twilio with related news headlines when daily price swings exceed 5%.',
     tags: ['Python', 'Alpha Vantage API', 'News API', 'Twilio'],
   },
   {
@@ -54,7 +54,7 @@ const PROJECTS = [
     title: 'Password Manager',
     route: '/projects/password-manager',
     description:
-      'Desktop GUI app that generates strong random passwords, stores credentials securely in JSON, and supports instant search — with one-click clipboard copy.',
+      'Desktop GUI app that generates strong random passwords, stores credentials securely in JSON, and supports instant search   with one-click clipboard copy.',
     tags: ['Python', 'Tkinter', 'JSON', 'pyperclip'],
   },
 ];

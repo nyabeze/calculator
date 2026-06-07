@@ -12,7 +12,7 @@ const ITEMS = [
     Icon: BookMarked,
     label: 'Reading',
     value: 'The Daily Stoic',
-    detail: 'Ryan Holiday — 366 meditations on wisdom, perseverance, and the art of living',
+    detail: 'Ryan Holiday   366 meditations on wisdom, perseverance, and the art of living',
   },
   {
     Icon: Lightbulb,

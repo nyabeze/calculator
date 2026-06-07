@@ -1,0 +1,10 @@
+Date: 11/7/2024
+Time: 10:28
+Phone Number: +263781673113
+Message: ukuita sei Yuda mazuvano ndakuita zveweather mornaz yakamira so {'temperature': 16.4, 'description': 'scattered clouds'} skarten yakamira so {'temperature': 15.57, 'description': 'scattered clouds'} chi late number zvakadai {'temperature': 13.76, 'description': 'few clouds'} nhasi hakunaye ndomessege yabva kuvakomana veweather ska usakwate
+--------------------
+Date: 11/7/2024
+Time: 19:32
+Phone Number: +263781673113
+Message: ndeip Yuda mazuvano ndakuita zveweather mornaz yakamira so {'temperature': 15.45, 'description': 'few clouds'} skarten yakamira so {'temperature': 14.6, 'description': 'few clouds'} chi late number zvakadai {'temperature': 12.78, 'description': 'few clouds'} nhasi hakunaye ndomessege yabva kuvakomana veweather ska usakwate
+--------------------

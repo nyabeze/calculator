@@ -22,7 +22,7 @@ export default function Faith() {
             <p className="faith-text">
               I am a devout Seventh-day Adventist and a committed Sabbath keeper.
               From sundown Friday to sundown Saturday, I step away from work,
-              screens, and ambition — not because the world stops, but because
+              screens, and ambition not because the world stops, but because
               rest is an act of trust and a declaration that I am more than what
               I produce.
             </p>
@@ -36,7 +36,7 @@ export default function Faith() {
             <div className="faith-pillars">
               <div className="faith-pillar">
                 <span className="faith-pillar-icon">✦</span>
-                <span>Sabbath observer — Friday sundown to Saturday sundown</span>
+                <span>Sabbath observer   Friday sundown to Saturday sundown</span>
               </div>
               <div className="faith-pillar">
                 <span className="faith-pillar-icon">✦</span>
@@ -44,7 +44,7 @@ export default function Faith() {
               </div>
               <div className="faith-pillar">
                 <span className="faith-pillar-icon">✦</span>
-                <span>Faith-driven work ethic — integrity over convenience</span>
+                <span>Faith-driven work ethic   integrity over convenience</span>
               </div>
             </div>
           </div>

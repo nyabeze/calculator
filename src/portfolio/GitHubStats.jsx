@@ -80,7 +80,7 @@ export default function GitHubStats() {
           )}
 
           {error && (
-            <p className="gh-error">Could not load stats — visit GitHub directly.</p>
+            <p className="gh-error">Could not load stats   visit GitHub directly.</p>
           )}
 
           <a

@@ -25,7 +25,7 @@ export default function About() {
           </p>
           <p>
             My skills span Python, Flutter, Flask, Django, React, REST APIs,
-            and Tailwind CSS. I've worked across diverse roles — from teaching
+            and Tailwind CSS. I've worked across diverse roles   from teaching
             Python to children, to training AI models, to providing enterprise
             IT support in healthcare and optical laboratories.
           </p>
@@ -38,7 +38,7 @@ export default function About() {
           <div className="p-about-highlights">
             <div className="p-about-highlight">
               <div className="p-about-dot" />
-              <span>BSc Hons Computer Systems Engineering — Upper Second Class (2.1)</span>
+              <span>BSc Hons Computer Systems Engineering   Upper Second Class (2.1)</span>
             </div>
             <div className="p-about-highlight">
               <div className="p-about-dot" />
@@ -51,7 +51,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Right column — stat cards instead of repeated photo */}
+        {/* Right column   stat cards instead of repeated photo */}
         <div className="p-about-stats-wrap">
           <div className="p-about-stats">
             {STATS.map(({ value, label }) => (

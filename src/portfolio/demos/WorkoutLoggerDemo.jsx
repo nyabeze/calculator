@@ -10,7 +10,7 @@ const SETUP = [
   { desc: 'Install dependencies:', cmd: 'pip install requests python-dotenv' },
   { desc: 'Create a .env file with your API credentials:', cmd: 'NUTRITIONIX_APP_ID=your_id\nNUTRITIONIX_API_KEY=your_key\nSHEETY_ENDPOINT=your_sheety_url\nSHEETY_USERNAME=your_username\nSHEETY_PASSWORD=your_password' },
   { desc: 'Run the script:', cmd: 'python main.py' },
-  { desc: 'When prompted, describe your workout in natural English — e.g. "ran 5km for 30 minutes". The script logs it to your Google Sheet.' },
+  { desc: 'When prompted, describe your workout in natural English   e.g. "ran 5km for 30 minutes". The script logs it to your Google Sheet.' },
 ];
 
 const EXERCISES = [
@@ -62,7 +62,7 @@ function Demo() {
     <div className="demo-page">
       <div className="demo-container">
         <h1 className="demo-title">Natural Language Workout Logger</h1>
-        <p className="demo-sub">Describe your workout in plain English — the app parses it and calculates calories burned (based on a {WEIGHT_KG}kg body weight).</p>
+        <p className="demo-sub">Describe your workout in plain English   the app parses it and calculates calories burned (based on a {WEIGHT_KG}kg body weight).</p>
 
         <div className="demo-card">
           <p className="demo-card-label">Log a Workout</p>

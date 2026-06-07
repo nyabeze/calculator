@@ -63,7 +63,7 @@ function Demo() {
     <div className="demo-page">
       <div className="demo-container">
         <h1 className="demo-title">Spotify Playlist Creator</h1>
-        <p className="demo-sub">Pick any date — the app scrapes the Billboard Hot 100 for that week and builds you a Spotify playlist from the top tracks.</p>
+        <p className="demo-sub">Pick any date   the app scrapes the Billboard Hot 100 for that week and builds you a Spotify playlist from the top tracks.</p>
 
         <div className="demo-card">
           <p className="demo-card-label">Choose a Date</p>

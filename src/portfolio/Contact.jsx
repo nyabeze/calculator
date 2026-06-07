@@ -43,7 +43,7 @@ export default function Contact() {
             <p className="p-contact-intro">
               I'm open to full-time roles, freelance projects, and
               collaborations. Whether you have a question, an opportunity, or
-              just want to say hi — my inbox is always open.
+              just want to say hi   my inbox is always open.
             </p>
 
             <div className="p-contact-links">

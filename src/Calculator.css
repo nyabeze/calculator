@@ -91,7 +91,7 @@
   transform: scale(0.96);
 }
 
-/* ─── Operator buttons (*, ÷, +, -) — always column 4 in the DOM ─── */
+/* ─── Operator buttons (*, ÷, +, -)   always column 4 in the DOM ─── */
 .btn:nth-child(4),
 .btn:nth-child(8),
 .btn:nth-child(12),
@@ -118,13 +118,13 @@
   background: rgba(255, 107, 107, 0.14);
 }
 
-/* ─── Zero — spans 2 columns ─── */
+/* ─── Zero   spans 2 columns ─── */
 .zero {
   grid-column: span 2;
   margin-left: 0;
 }
 
-/* ─── Equals — spans 2 columns, accent fill ─── */
+/* ─── Equals   spans 2 columns, accent fill ─── */
 .full_width {
   grid-column: span 2;
   width: auto;

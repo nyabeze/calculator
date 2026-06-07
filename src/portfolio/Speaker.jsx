@@ -30,13 +30,13 @@ export default function Speaker() {
         <div className="sp-quote p-reveal" ref={topRef}>
           <span className="sp-quote-mark">"</span>
           <p>
-            Words carry the same weight as code — both have the power
+            Words carry the same weight as code   both have the power
             to change systems, shift mindsets, and move people to act.
           </p>
         </div>
 
         <div className="sp-grid">
-          {/* Left — Speaking */}
+          {/* Left   Speaking */}
           <div className="sp-card p-reveal" ref={leftRef}>
             <div className="sp-card-header">
               <div className="sp-icon">
@@ -64,7 +64,7 @@ export default function Speaker() {
             </a>
           </div>
 
-          {/* Right — Influences */}
+          {/* Right   Influences */}
           <div className="sp-card p-reveal" ref={rightRef}>
             <div className="sp-card-header">
               <div className="sp-icon">

@@ -57,7 +57,7 @@ function Demo() {
     <div className="demo-page">
       <div className="demo-container">
         <h1 className="demo-title">Amazon Price Checker</h1>
-        <p className="demo-sub">Set a target price — the scraper monitors Amazon and emails you when the price drops below your threshold.</p>
+        <p className="demo-sub">Set a target price   the scraper monitors Amazon and emails you when the price drops below your threshold.</p>
 
         <div className="demo-card">
           <p className="demo-card-label">Configure Alert</p>
